@@ -1,0 +1,37 @@
+    Pour lancer le programme aller dans le bash/invité de commande et noter:
+
+python3 mc_project.py seq
+
+python3 : chemin python
+
+mc_project.py : nom du programme (assurer vous d'etre dans le dossier scripts la ou se trouve le programme
+
+seq : la sequence d'interet en code une lettre et majuscule
+
+exemple d'un lancement de programme basique :
+
+python3 mc_project.py DEFPKYLMFP
+
+vous obtiendrez en sortie un affichage du repliement de votre proteine en ASCII sur la console, un fichier PDB(un
+exemple de sortie est disponible dans results)et un graphique des variations d'energies au cours de la recherche
+
+options:
+-h : aide
+
+-t : choix de temperature (0.5 par defaut)
+
+-s : nombre d'etape pour mcsearch (500 par defaut)
+
+exemple d'un lancement avec les options activer :
+
+python3 mc_project.py DEFPKYLMFP -t 0.06 -s 1000
+
+les options peuvent etre activer independamment les unes des autres
+
+Pour le bon fonctionnement du programme la librairie matplotlib(version utilise 3.2.1) est necessaire, un fichier yml
+est fourni pour creer un environnement conda
+
+Pour creer l'environnement utiliser la commande suivante en vous trouvant dans le dossier env :
+conda env create -f mcproject.yml
+puis activer le a l'aide de la commande suivante :
+conda activate mcproject

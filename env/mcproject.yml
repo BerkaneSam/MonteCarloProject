@@ -1,0 +1,8 @@
+name: mcproject
+channels:
+	- defaults
+	- bioconda
+	- conda-forge
+dependencies:
+	- python=3.9
+	-matplotlib=3.2.1
