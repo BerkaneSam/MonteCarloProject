@@ -630,7 +630,7 @@ def mcsearch(steps, mat, prots, aas, t=0.5):
             mat = matbis
             energy_track.append(energy)
         else:
-            q = random.choice([0, 1])
+            q = random.choice([0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1])
             if q > math.exp(-energy_delta / t):
                 mat = matbis
                 energy_track.append(energy)
@@ -672,7 +672,7 @@ def pdb_printer(prots):
     """
     Permet de creer un fichier PDB du repliement effectuer a l'issue de MCsearch en utilisant les coordonnees et autres
     informations conserver au sein des objets AminoAcid
-    :param prots: dictionnaire d'AminoAcid
+    :param prots: dictionnaire d'AminoAcid:
     :return: creer un document PDB
     """
     to_be_printed = []
